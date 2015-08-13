@@ -14,11 +14,22 @@ public class LineTest {
 		String cardNumber = "Test card number";
 		LocalDate expiryDate = LocalDate.of(2015, 8, 13);
 		Line line = new Line(bank, cardNumber, expiryDate);
-		
+
 		assertEquals(bank, line.getBank());
 		assertEquals(cardNumber, line.getCardNumber());
 		assertEquals(expiryDate, line.getExpiryDate());
+
+	}
+	
+	@Test
+	public void testToString(){
+
+		String bank = "Test Bank";
+		String cardNumber = "Test card number";
+		LocalDate expiryDate = LocalDate.of(2015, 8, 13);
+		Line line = new Line(bank, cardNumber, expiryDate);
 		
+		assertEquals(cardNumber, line.toString());
 	}
 
 }

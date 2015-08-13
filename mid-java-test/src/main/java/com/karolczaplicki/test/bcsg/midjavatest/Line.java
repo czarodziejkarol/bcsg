@@ -3,27 +3,42 @@ package com.karolczaplicki.test.bcsg.midjavatest;
 import java.time.LocalDate;
 
 public class Line {
-	
+
 	private String bank;
 	private String cardNumber;
+	private LocalDate expiryDate;
+
+	private String maskedCardNumber;
 
 	public Line(String bank, String cardNumber, LocalDate expiryDate) {
-		// TODO Auto-generated constructor stub
+		this.bank = bank;
+		this.cardNumber = cardNumber;
+		this.expiryDate = expiryDate;
 	}
 
-	public Object getBank() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getBank() {
+		return bank;
 	}
 
-	public Object getCardNumber() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getCardNumber() {
+		return cardNumber;
 	}
 
-	public Object getExpiryDate() {
-		// TODO Auto-generated method stub
-		return null;
+	public LocalDate getExpiryDate() {
+		return expiryDate;
+	}
+
+	public String getMaskedCardNumber() {
+		return maskedCardNumber;
+	}
+
+	public void setMaskedCardNumber(String maskedCardNumber) {
+		this.maskedCardNumber = maskedCardNumber;
+	}
+
+	@Override
+	public String toString() {
+		return cardNumber;
 	}
 
 }
