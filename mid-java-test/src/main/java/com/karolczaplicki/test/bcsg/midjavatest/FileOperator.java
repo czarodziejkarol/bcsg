@@ -54,7 +54,7 @@ public class FileOperator {
 
 		for (Line line : lines) {
 			writer.write(line.getBank() + "," + line.getCardNumber() + ","
-					+ line.getMaskedCardNumber());
+					+ line.getMaskedCardNumber() +"\n");
 		}
 		
 		writer.flush();
